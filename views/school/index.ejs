@@ -1,0 +1,31 @@
+<% layout('layout/boilerplate') -%>
+
+    <% for(let s of school){ %>
+        <!-- <li><a href="/schools/<%= s._id %>"><%= s.name %></a></li> -->
+
+        <div class="index container text-center">
+            <div class="item1">
+                <% if(s.images.length){ %>
+                    <img src="<%= s.images[0].url %>" alt="" srcset="">
+                    <% }else{ %>
+                        <img src="" alt="" srcset="">
+                        <% } %>
+            </div>
+            <div>
+                <h5>
+                    <%= s.name %>
+                </h5>
+                <p>Location: <%= s.location %>
+                </p>
+                <p>Tuition Fee: $<%= s.tuitionFee %>/year</p>
+                <p>
+                    <%= s.description.substring(0,200) + "..." %>
+                </p>
+                <a class="btn btn-info" href="/schools/<%= s._id %>">View</a>
+            </div>
+
+        </div>
+
+
+        <% } %>
+            

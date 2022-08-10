@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    background-color: #f0f8fd;
+}
+
+/* End of General Style */
+
+
+/* Navbar styles */
+nav {
+    border-radius: 10px;
+}
+
+nav div a {
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+nav div a:hover {
+    background-color: rgb(68, 144, 195);
+    color: black;
+    border-radius: 10px;
+}
+
+/* End of navbar styles */
+
+
+
+/* Footer styles */
+.foot {
+    border-radius: 10px;
+}
+
+/* End of Footer styles */
+
+
+
+
+/* Index Style */
+.index {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 10px;
+    padding: 0;
+    /*border-radius: 12px; */
+    width: 750px;
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+
+.index img {
+    height: 250px;
+    width: 400px;
+    border-radius: 35px;
+}
+
+/* End of Index Style */
+
+
+
+/* Show Style */
+.show {
+    width: 100%;
+}
+
+.show .button-group a {
+    margin-left: 5px;
+}
+
+.show .the-image {
+    width: 100px;
+    height: 400px;
+}
+
+.show .map {
+    border-radius: 30px;
+    width: 650px;
+    height: 200px;
+}
+
+/* End of Show Style */
+
+
+
+/* New Style */
+.new-container {
+    padding-bottom: 1%;
+}
+
+.new {
+    width: 500px;
+    margin-bottom: 20%;
+}
+
+/* End of New Style */
+
+/* main style */
+.main {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+/* end of main style */
+
+/* Login style */
+
+.login {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 27%;
+    height: 100%;
+
+}
+
+.login-left-side {
+    background-color: #62bbf2;
+    display: grid;
+}
+
+.login-left-side-content {
+    display: flex;
+    justify-content: center;
+    color: rgb(57, 57, 208);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.login-left-side-content i {
+    padding: 0px 10px;
+}
+
+.login-right-side {
+    display: grid;
+    padding: 20px;
+}
+
+.login-right-side-content {
+    display: flex;
+    justify-content: center;
+}
+
+.login-right-side-content .user-name {
+    border-radius: 20px;
+    width: 300px;
+    border: 1px solid #62bbf2;
+}
+
+.login-right-side-content .pass-word {
+    border-radius: 20px;
+    width: 300px;
+    border: 1px solid #62bbf2;
+}
+
+.login-right-side-content .login-button {
+    width: 300px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.login-right-side-content .login-button:hover {
+    background-color: #1d89cc;
+}
+
+.login-right-side-content .register-button {
+    width: 300px;
+    color: white;
+    border-radius: 15px;
+}
+
+.login-right-side-content .register-button:hover {
+    background-color: #1d89cc;
+}
+
+.login h1 {
+    text-align: center;
+}
+
+/* End of Login style */
+
+/* register style */
+
+.register {
+    padding-bottom: 17%;
+}
+
+/* end of register style */
+
+
+/* responsive */
+@media(max-width: 800px) {
+    .login {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .login-right-side {
+        order: -1;
+    }
+
+
+    .index {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        height: 600px;
+        /* border: 2px solid #5FC7F1;
+        border-radius: 40px; */
+    }
+    .index .item1{
+        height: 200px;
+    }
+    /* .index-father{
+        display: grid;
+        grid-template-rows: auto;
+    } */
+}

@@ -1,0 +1,67 @@
+<% layout('layout/boilerplate') -%>
+
+    <div class="container new-container mt-5">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <div class="new">
+                    <form action="/schools" method="post" class="needs-validation" novalidate
+                        enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">School Name</label>
+                            <input type="text" class="form-control" id="name" name="school[name]"
+                                placeholder="school name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location" name="school[location]"
+                                placeholder="location" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <label for="file">Image Url</label><br>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="file" aria-describedby="inputGroupFileAddon04"
+                                aria-label="Upload" name="image" multiple>
+                        </div>
+                        <!-- <input type="file" id="file" name="image" multiple><br><br> -->
+                        <!-- <div class="mb-3">
+                            <label for="image" class="form-label">Image Url</label>
+                            <input type="text" class="form-control" id="image" name="school[image]" placeholder="image url" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                        </div> -->
+                        <label for="price" class="form-label">Tuition Fee</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input id="price" type="text" class="form-control" name="school[tuitionFee]"
+                                placeholder="price" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" name="school[description]" rows="3"
+                                placeholder="description" required></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success">Add</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
