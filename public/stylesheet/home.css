@@ -1,9 +1,7 @@
 
 /* General Styles */
 body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover;
+    background-color: #62bbf2;
 }
 .container {
     display: grid;
