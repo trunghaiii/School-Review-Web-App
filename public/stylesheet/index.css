@@ -186,6 +186,28 @@ nav div a:hover {
 
 /* end of register style */
 
+/* search bar style */
+.search{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search form input{
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(68, 144, 195);
+}
+
+.search form button{
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+/* End of search bar style */
 
 /* responsive */
 @media(max-width: 800px) {

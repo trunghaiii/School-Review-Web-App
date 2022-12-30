@@ -98,4 +98,14 @@ router.delete("/:id",isLoggedIn,isAuthor, catchAsync(async (req, res) => {
     res.redirect("/schools");
 }))
 
+router.post("/search", catchAsync(async (req, res) => {
+    let school = await School.find({});
+    let searchSchoolList = school.filter(s => s.name.toLowerCase().includes(req.body.search.toLowerCase()));
+
+    res.render("school/searchIndex", { searchSchoolList });
+    // console.log(searchSchoolList);
+    // res.send("It work Hai a");
+    //console.log(req.body.search);
+}))
+
 module.exports = router;
