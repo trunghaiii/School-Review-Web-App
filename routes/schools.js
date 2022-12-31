@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const School = require("../models/schools")
+const Review = require("../models/reviews")
 const { catchAsync } = require("../utils/catchAsync")
 const {isLoggedIn, schoolValidate,isAuthor} = require("../middleware");
 
@@ -47,6 +48,39 @@ router.post("/", isLoggedIn,upload.array('image'),schoolValidate, catchAsync(asy
 //     res.send("It Worked");
 //     console.log(req.body, req.files);
 // })
+
+router.get("/topschool", catchAsync(async (req, res) => {
+    let list = {};
+    let listTop = [];
+    let school = await School.find({});
+    
+    for(let i = 0; i < school.length; i++){
+        let schoolName = school[i].name;
+        let averageStar = 0;
+        let sum = 0;
+        for(let j = 0; j < school[i].reviews.length; j++){  
+            let star = await Review.findById(school[i].reviews[j]);
+            //console.log(star.rating);
+            sum += star.rating;
+        }
+
+        averageStar = Number((sum/school[i].reviews.length).toFixed(1));
+        if(!averageStar) averageStar = 0;
+        list[schoolName] = averageStar;
+        // console.log(schoolName,averageStar);
+    }
+     console.log(list);
+
+     for(let h = 0; h < 5; h++){
+        let max = Object.keys(list).reduce((a, b) => list[a] > list[b] ? a : b);
+        listTop.push([max,list[max]]);
+        delete list[max];
+     }
+
+     //console.log(listTop);
+     res.render("school/topSchool", {listTop});
+    
+}))
 
 router.get("/:id", catchAsync(async (req, res, next) => {
     let school = await School.findById(req.params.id).populate({
