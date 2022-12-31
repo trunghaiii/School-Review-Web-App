@@ -1,0 +1,40 @@
+<% layout('layout/boilerplate') -%>
+
+<h1>Top Schools</h1>
+
+<table class="table table-hover table-primary">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">School Name</th>
+        <th scope="col">Average Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= listTop[0][0] %></td>
+        <td class="rating"><%= listTop[0][1] %> <div class="star">&#9733</div></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td><%= listTop[1][0] %></td>
+        <td class="rating"><%= listTop[1][1] %> <div class="star">&#9733</div></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td><%= listTop[2][0] %></td>
+        <td class="rating"><%= listTop[2][1] %> <div class="star">&#9733</div></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td><%= listTop[3][0] %></td>
+        <td class="rating"><%= listTop[3][1] %> <div class="star">&#9733</div></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td><%= listTop[4][0] %></td>
+        <td class="rating"><%= listTop[4][1] %> <div class="star">&#9733</div></td>
+      </tr>
+    </tbody>
+  </table>
